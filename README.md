@@ -38,7 +38,7 @@
 docker compose up -d --build
 ```
 
-浏览器打开 http://localhost:8080 即可填写、打印 PDF。
+浏览器打开 http://localhost:5174 即可填写、打印 PDF。
 
 常用命令：
 
@@ -48,4 +48,4 @@ docker compose logs -f
 docker compose down
 ```
 
-默认把容器 80 端口映射到本机 **8080**。若要改端口，编辑 `docker-compose.yml` 中的 `"8080:80"`。
+默认把容器 80 端口映射到本机 **5174**。若要改端口，编辑 `docker-compose.yml` 中的 `"5174:80"`。

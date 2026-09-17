@@ -4,5 +4,5 @@ services:
     image: jiaoan:latest
     container_name: jiaoan
     ports:
-      - "8080:80"
+      - "5174:80"
     restart: unless-stopped
