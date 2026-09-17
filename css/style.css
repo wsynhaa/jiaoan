@@ -4,7 +4,7 @@
   --line-strong: #247a52;
   --fill: #f4fbf7;
   --paper: #ffffff;
-  --rule: #b7e0c8;
+  --rule: #d7ebde;
   --muted: #3d7a5f;
   --soft: #e7f6ee;
   --toolbar: #1f6b4a;
@@ -146,15 +146,14 @@ body {
   width: 297mm;
   height: 420mm;
   min-width: 0;
-  border: 0.45pt solid var(--line-strong);
-  padding: 8mm;
+  padding: 10mm;
   background: var(--paper);
   box-shadow: var(--shadow);
 }
 
 .page-inner {
   height: 100%;
-  border: 1.35pt solid var(--line);
+  border: 1pt solid var(--line);
   display: grid;
   min-height: 0;
 }
@@ -189,8 +188,8 @@ body {
   font-size: 18pt;
   letter-spacing: 0.12em;
   color: var(--ink);
-  border-bottom: 0.7pt solid var(--line);
-  background: var(--fill);
+  border-bottom: 0.6pt solid var(--line);
+  background: transparent;
 }
 
 .meta-grid {
@@ -239,10 +238,10 @@ body {
   justify-content: center;
   text-align: center;
   color: var(--ink);
-  background: var(--fill);
+  background: transparent;
   font-size: 10.5pt;
   font-weight: 700;
-  padding: 0 1mm;
+  padding: 0 1.5mm;
 }
 
 .row,
@@ -283,11 +282,12 @@ body {
   background-origin: padding-box;
 }
 
-.write.single {
+.write.single,
+.write.plain {
   display: flex;
   align-items: center;
   background-image: none;
-  line-height: 1.2;
+  line-height: 1.35;
   padding-top: 0;
 }
 
@@ -344,13 +344,13 @@ body {
 
 .guide,
 .printed {
-  padding: 0 2.4mm;
-  color: var(--muted);
+  padding: 1.2mm 2.4mm 0;
+  color: var(--ink);
   font-size: 10pt;
   font-weight: 700;
   line-height: var(--line-h);
-  background: #f8fcfa;
-  border-bottom: 0.45pt solid var(--rule);
+  background: transparent;
+  border: 0;
 }
 
 .grow {
