@@ -101,7 +101,7 @@ function closePrintDialog() {
 
 function printSheet() {
   closePrintDialog();
-  document.title = "新能源汽车实训记录表-A3正反面";
+  document.title = "汽车工程系实训课程报告-A4正反面";
   window.print();
 }
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", fitSheet);
   window.addEventListener("beforeprint", () => {
     document.getElementById("sheet").style.transform = "none";
-    document.getElementById("sheetFrame").style.width = "297mm";
+    document.getElementById("sheetFrame").style.width = "210mm";
     document.getElementById("sheetFrame").style.height = "auto";
   });
   window.addEventListener("afterprint", fitSheet);

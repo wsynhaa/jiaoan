@@ -117,7 +117,7 @@ body {
 }
 
 .sheet {
-  width: 297mm;
+  width: 210mm;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -142,10 +142,10 @@ body {
 }
 
 .page {
-  width: 297mm;
-  height: 420mm;
+  width: 210mm;
+  height: 297mm;
   min-width: 0;
-  padding: 10mm;
+  padding: 8mm;
   background: var(--paper);
   box-shadow: var(--shadow);
 }
@@ -159,24 +159,24 @@ body {
 
 .page-front .page-inner {
   grid-template-rows:
-    12mm
-    22mm
-    12mm
-    28mm
+    11mm
+    20mm
+    11mm
+    24mm
     var(--row-h)
     var(--row-h)
-    22mm
+    20mm
     1fr;
 }
 
 .page-back .page-inner {
   grid-template-rows:
-    12mm
+    11mm
     1fr
-    90mm
-    42mm
-    28mm
-    14mm;
+    68mm
+    32mm
+    22mm
+    13mm;
 }
 
 .form-title {
@@ -184,8 +184,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18pt;
-  letter-spacing: 0.12em;
+  font-size: 16pt;
+  letter-spacing: 0.08em;
   color: var(--ink);
   border-bottom: 0.6pt solid var(--line);
   background: transparent;
@@ -415,7 +415,7 @@ body {
 }
 
 @page {
-  size: A3 portrait;
+  size: A4 portrait;
   margin: 0;
 }
 
@@ -423,7 +423,7 @@ body {
   html,
   body {
     background: #fff;
-    width: 297mm;
+    width: 210mm;
     height: auto;
   }
 
@@ -437,14 +437,14 @@ body {
   }
 
   .sheet-frame {
-    width: 297mm !important;
+    width: 210mm !important;
     height: auto !important;
   }
 
   .sheet {
     gap: 0;
     transform: none !important;
-    width: 297mm !important;
+    width: 210mm !important;
     height: auto !important;
   }
 
