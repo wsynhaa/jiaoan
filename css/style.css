@@ -195,9 +195,21 @@ body {
 
 .meta-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   border-bottom: 0.7pt solid var(--line);
+}
+
+.meta-row {
+  display: grid;
+  min-height: 0;
+}
+
+.meta-row-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.meta-row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .meta-item,
@@ -209,11 +221,11 @@ body {
   border-bottom: 0.7pt solid var(--line);
 }
 
-.meta-grid .meta-item:nth-child(n + 5) {
+.meta-row-3 .meta-item {
   border-bottom: 0;
 }
 
-.meta-grid .meta-item:nth-child(4n),
+.meta-row .meta-item:last-child,
 .sign-row .sign-item:last-child {
   border-right: 0;
 }
