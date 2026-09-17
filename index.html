@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>学生实训记录表（A3）</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="toolbar no-print">
+    <div class="toolbar-brand">
+      <strong>学生实训记录表</strong>
+      <span>A3 横向 · 由教师教案改编</span>
+    </div>
+    <div class="toolbar-actions">
+      <button type="button" id="btnSample" class="btn">填写示例</button>
+      <button type="button" id="btnClear" class="btn">清空</button>
+      <button type="button" id="btnPrint" class="btn btn-primary">打印 / 导出 PDF</button>
+    </div>
+  </header>
+
+  <p class="hint no-print">
+    在表格中直接填写。导出时点击「打印 / 导出 PDF」，打印机选 <strong>另存为 PDF</strong>，纸张选 <strong>A3</strong>，方向选 <strong>横向</strong>，边距选 <strong>无</strong>。
+  </p>
+
+  <main id="stage" class="stage">
+    <div id="sheetFrame" class="sheet-frame">
+      <article id="sheet" class="sheet" aria-label="学生实训记录表 A3">
+        <section class="page page-left">
+          <div class="page-inner">
+            <h1 class="form-title">学生实训记录表</h1>
+
+            <div class="meta-grid">
+              <div class="meta-item">
+                <span>专业</span>
+                <div class="write single" contenteditable="true" data-field="major"></div>
+              </div>
+              <div class="meta-item">
+                <span>班级</span>
+                <div class="write single" contenteditable="true" data-field="className"></div>
+              </div>
+              <div class="meta-item">
+                <span>姓名</span>
+                <div class="write single" contenteditable="true" data-field="studentName"></div>
+              </div>
+              <div class="meta-item">
+                <span>学号</span>
+                <div class="write single" contenteditable="true" data-field="studentId"></div>
+              </div>
+              <div class="meta-item">
+                <span>指导教师</span>
+                <div class="write single" contenteditable="true" data-field="teacher"></div>
+              </div>
+              <div class="meta-item">
+                <span>实训日期</span>
+                <div class="write single" contenteditable="true" data-field="date"></div>
+              </div>
+              <div class="meta-item">
+                <span>课时</span>
+                <div class="write single" contenteditable="true" data-field="hours"></div>
+              </div>
+              <div class="meta-item">
+                <span>工位</span>
+                <div class="write single" contenteditable="true" data-field="station"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="label">实训课题</div>
+              <div class="write" contenteditable="true" data-field="topic" data-placeholder="填写本次实训课题 / 零件或项目名称"></div>
+            </div>
+
+            <div class="row row-goal">
+              <div class="label">实训目标</div>
+              <div class="write" contenteditable="true" data-field="goals" data-placeholder="知识、技能、素养目标，可分条书写"></div>
+            </div>
+
+            <div class="row">
+              <div class="label">实训重点</div>
+              <div class="write" contenteditable="true" data-field="keyPoints"></div>
+            </div>
+
+            <div class="row">
+              <div class="label">实训难点</div>
+              <div class="write" contenteditable="true" data-field="difficulties"></div>
+            </div>
+
+            <div class="row">
+              <div class="label">实训方法</div>
+              <div class="write" contenteditable="true" data-field="methods"></div>
+            </div>
+
+            <div class="row">
+              <div class="label">学习方法</div>
+              <div class="write" contenteditable="true" data-field="studyMethods"></div>
+            </div>
+
+            <div class="prep-block">
+              <div class="label">实训准备</div>
+              <div class="prep-rows">
+                <div class="prep-row">
+                  <div class="sub-label">刀、量、工具</div>
+                  <div class="write" contenteditable="true" data-field="tools"></div>
+                </div>
+                <div class="prep-row">
+                  <div class="sub-label">辅具、材料</div>
+                  <div class="write" contenteditable="true" data-field="materials"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row-process">
+              <div class="label">实训实施</div>
+              <div class="process">
+                <div class="guide">一、安全检查与准备工作</div>
+                <div class="write" contenteditable="true" data-field="safetyPrep" data-placeholder="防护用品、设备点检、图样与工艺准备等"></div>
+                <div class="guide">二、操作步骤</div>
+                <div class="write grow" contenteditable="true" data-field="steps" data-placeholder="按工序写出主要操作步骤"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page page-right">
+          <div class="page-inner">
+            <div class="row row-process-continue">
+              <div class="label">实训实施</div>
+              <div class="process">
+                <div class="guide">三、过程记录与问题处理</div>
+                <div class="write grow" contenteditable="true" data-field="processNotes" data-placeholder="记录操作过程、异常现象及处理办法"></div>
+                <div class="guide">四、质量检测</div>
+                <div class="write" contenteditable="true" data-field="qualityCheck" data-placeholder="检测项目、实测数据、是否合格"></div>
+              </div>
+            </div>
+
+            <div class="summary-block">
+              <div class="label">小结</div>
+              <div class="summary-rows">
+                <div class="summary-row">
+                  <div class="printed">实训效果与学习收获总结：</div>
+                  <div class="write" contenteditable="true" data-field="resultSummary"></div>
+                </div>
+                <div class="summary-row">
+                  <div class="printed">现场管理与安全总结：</div>
+                  <div class="write" contenteditable="true" data-field="safetySummary"></div>
+                </div>
+                <div class="summary-row">
+                  <div class="printed">设备维护保养、实训场地卫生总结：</div>
+                  <div class="write" contenteditable="true" data-field="maintenanceSummary"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row-reflect">
+              <div class="label">实训反思</div>
+              <div class="write" contenteditable="true" data-field="reflection" data-placeholder="不足、改进措施与下次注意点"></div>
+            </div>
+
+            <div class="row row-comment">
+              <div class="label">教师评价</div>
+              <div class="write" contenteditable="true" data-field="teacherComment"></div>
+            </div>
+
+            <div class="sign-row">
+              <div class="sign-item">
+                <span>成绩</span>
+                <div class="write single" contenteditable="true" data-field="score"></div>
+              </div>
+              <div class="sign-item">
+                <span>学生签名</span>
+                <div class="write single" contenteditable="true" data-field="studentSign"></div>
+              </div>
+              <div class="sign-item">
+                <span>教师签名</span>
+                <div class="write single" contenteditable="true" data-field="teacherSign"></div>
+              </div>
+              <div class="sign-item">
+                <span>日期</span>
+                <div class="write single" contenteditable="true" data-field="signDate"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <div id="printDialog" class="modal no-print" hidden>
+    <div class="modal-card" role="dialog" aria-labelledby="printTitle">
+      <h2 id="printTitle">导出 A3 PDF</h2>
+      <ol>
+        <li>目标打印机选择 <strong>另存为 PDF</strong> 或 <strong>Microsoft Print to PDF</strong>。</li>
+        <li>纸张尺寸选择 <strong>A3</strong>。</li>
+        <li>方向选择 <strong>横向</strong>。</li>
+        <li>边距选择 <strong>无 / 默认</strong>，并勾选 <strong>背景图形</strong>。</li>
+      </ol>
+      <div class="modal-actions">
+        <button type="button" id="btnCancelPrint" class="btn">取消</button>
+        <button type="button" id="btnConfirmPrint" class="btn btn-primary">打开打印对话框</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
