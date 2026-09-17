@@ -338,7 +338,7 @@ body {
 
 .sign-row {
   display: grid;
-  grid-template-columns: 1.1fr 1.3fr 1.3fr 1.1fr;
+  grid-template-columns: 1.1fr 1.6fr 1.1fr;
   min-height: 0;
 }
 

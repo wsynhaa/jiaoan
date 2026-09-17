@@ -25,7 +25,6 @@ const sampleData = {
   reflection: "验电前等待时间不够，被监护同学提醒后重做。下次先确认下电等待时长，再清洁测量点，并提前检查绝缘手套气密。",
   teacherComment: "",
   score: "",
-  studentSign: "",
   teacherSign: "",
   signDate: ""
 };
