@@ -15,12 +15,13 @@
     <div class="toolbar-actions">
       <button type="button" id="btnSample" class="btn">填写示例</button>
       <button type="button" id="btnClear" class="btn">清空</button>
+      <button type="button" id="btnWord" class="btn">导出 Word</button>
       <button type="button" id="btnPrint" class="btn btn-primary">打印 / 导出 PDF</button>
     </div>
   </header>
 
   <p class="hint no-print">
-    在表格中直接填写。导出时点击「打印 / 导出 PDF」，打印机选 <strong>另存为 PDF</strong> 或本机打印机，纸张选 <strong>A4</strong>，方向选 <strong>纵向</strong>，并开启 <strong>双面打印（长边翻转）</strong>。边距选 <strong>无</strong>，勾选 <strong>背景图形</strong>。
+    在表格中直接填写。可点击「导出 Word」下载 <strong>.docx</strong>（WPS / Microsoft Word 可打开）。也可点击「打印 / 导出 PDF」，打印机选 <strong>另存为 PDF</strong> 或本机打印机，纸张选 <strong>A4</strong>，方向选 <strong>纵向</strong>，并开启 <strong>双面打印（长边翻转）</strong>。边距选 <strong>无</strong>，勾选 <strong>背景图形</strong>。
   </p>
 
   <main id="stage" class="stage">
@@ -195,6 +196,7 @@
     </div>
   </div>
 
+  <script src="js/export-word.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
