@@ -148,7 +148,7 @@ body {
     11mm
     20mm
     var(--row-h)
-    22mm
+    24mm
     var(--row-h)
     var(--row-h)
     var(--row-h)
@@ -160,9 +160,9 @@ body {
 .page-right .page-inner {
   grid-template-rows:
     1fr
-    68mm
-    30mm
-    24mm
+    74mm
+    34mm
+    22mm
     13mm;
 }
 
@@ -243,7 +243,9 @@ body {
   font-size: 10.5pt;
   color: #1a3328;
   outline: none;
-  overflow: hidden;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0,
@@ -266,7 +268,8 @@ body {
   background-color: #fffdf3;
 }
 
-.write:empty::before {
+.write:empty::before,
+.write.is-empty::before {
   content: attr(data-placeholder);
   color: #9bbdae;
 }
@@ -427,8 +430,12 @@ body {
     height: 297mm !important;
   }
 
-  .write:empty::before {
-    content: none;
+  .write {
+    overflow: hidden;
+  }
+
+  .write::before {
+    content: none !important;
   }
 
   .write:focus {

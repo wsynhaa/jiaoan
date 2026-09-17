@@ -36,10 +36,27 @@ function fields() {
   return [...document.querySelectorAll("[data-field]")];
 }
 
+function fieldText(el) {
+  return (el.innerText || "").replace(/\u200B/g, "").replace(/\n+$/, "");
+}
+
+function isBlankField(el) {
+  return fieldText(el).trim() === "";
+}
+
+function refreshEmptyState(el) {
+  if (isBlankField(el)) {
+    el.innerHTML = "";
+    el.classList.add("is-empty");
+  } else {
+    el.classList.remove("is-empty");
+  }
+}
+
 function getFormData() {
   const data = {};
   fields().forEach((el) => {
-    data[el.dataset.field] = el.innerText.replace(/\n+$/, "");
+    data[el.dataset.field] = fieldText(el);
   });
   return data;
 }
@@ -47,6 +64,7 @@ function getFormData() {
 function setFormData(data) {
   fields().forEach((el) => {
     el.innerText = data[el.dataset.field] || "";
+    refreshEmptyState(el);
   });
 }
 
@@ -93,9 +111,21 @@ function printSheet() {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadForm();
+  fields().forEach(refreshEmptyState);
   fitSheet();
 
-  document.getElementById("sheet").addEventListener("input", saveForm);
+  document.getElementById("sheet").addEventListener("input", (event) => {
+    const el = event.target.closest("[data-field]");
+    if (el) refreshEmptyState(el);
+    saveForm();
+  });
+  document.getElementById("sheet").addEventListener("paste", (event) => {
+    const el = event.target.closest("[data-field]");
+    if (!el) return;
+    event.preventDefault();
+    const text = (event.clipboardData || window.clipboardData).getData("text/plain");
+    document.execCommand("insertText", false, text);
+  });
   document.getElementById("btnSample").addEventListener("click", () => {
     setFormData(sampleData);
     saveForm();
