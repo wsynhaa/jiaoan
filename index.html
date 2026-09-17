@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>学生实训记录表（A3）</title>
+  <title>新能源汽车实训记录表（A3）</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="toolbar no-print">
     <div class="toolbar-brand">
-      <strong>学生实训记录表</strong>
-      <span>A3 横向 · 由教师教案改编</span>
+      <strong>新能源汽车实训记录表</strong>
+      <span>A3 正反面 · 高压安全实训</span>
     </div>
     <div class="toolbar-actions">
       <button type="button" id="btnSample" class="btn">填写示例</button>
@@ -20,54 +20,56 @@
   </header>
 
   <p class="hint no-print">
-    在表格中直接填写。导出时点击「打印 / 导出 PDF」，打印机选 <strong>另存为 PDF</strong>，纸张选 <strong>A3</strong>，方向选 <strong>横向</strong>，边距选 <strong>无</strong>。
+    在表格中直接填写。导出时点击「打印 / 导出 PDF」，打印机选 <strong>另存为 PDF</strong> 或本机打印机，纸张选 <strong>A3</strong>，方向选 <strong>纵向</strong>，并开启 <strong>双面打印（长边翻转）</strong>。边距选 <strong>无</strong>，勾选 <strong>背景图形</strong>。
   </p>
 
   <main id="stage" class="stage">
     <div id="sheetFrame" class="sheet-frame">
-      <article id="sheet" class="sheet" aria-label="学生实训记录表 A3">
-        <section class="page page-left">
+      <article id="sheet" class="sheet" aria-label="新能源汽车实训记录表 A3 正反面">
+        <div class="page-wrap">
+          <div class="page-tag no-print">正面</div>
+          <section class="page page-front">
           <div class="page-inner">
-            <h1 class="form-title">学生实训记录表</h1>
+            <h1 class="form-title">新能源汽车实训记录表</h1>
 
             <div class="meta-grid">
-              <div class="meta-item">
-                <span>专业</span>
-                <div class="write single" contenteditable="true" data-field="major"></div>
+              <div class="meta-row meta-row-4">
+                <div class="meta-item">
+                  <span>专业</span>
+                  <div class="write single" contenteditable="true" data-field="major"></div>
+                </div>
+                <div class="meta-item">
+                  <span>班级</span>
+                  <div class="write single" contenteditable="true" data-field="className"></div>
+                </div>
+                <div class="meta-item">
+                  <span>姓名</span>
+                  <div class="write single" contenteditable="true" data-field="studentName"></div>
+                </div>
+                <div class="meta-item">
+                  <span>学号</span>
+                  <div class="write single" contenteditable="true" data-field="studentId"></div>
+                </div>
               </div>
-              <div class="meta-item">
-                <span>班级</span>
-                <div class="write single" contenteditable="true" data-field="className"></div>
-              </div>
-              <div class="meta-item">
-                <span>姓名</span>
-                <div class="write single" contenteditable="true" data-field="studentName"></div>
-              </div>
-              <div class="meta-item">
-                <span>学号</span>
-                <div class="write single" contenteditable="true" data-field="studentId"></div>
-              </div>
-              <div class="meta-item">
-                <span>指导教师</span>
-                <div class="write single" contenteditable="true" data-field="teacher"></div>
-              </div>
-              <div class="meta-item">
-                <span>实训日期</span>
-                <div class="write single" contenteditable="true" data-field="date"></div>
-              </div>
-              <div class="meta-item">
-                <span>课时</span>
-                <div class="write single" contenteditable="true" data-field="hours"></div>
-              </div>
-              <div class="meta-item">
-                <span>工位</span>
-                <div class="write single" contenteditable="true" data-field="station"></div>
+              <div class="meta-row meta-row-3">
+                <div class="meta-item">
+                  <span>指导教师</span>
+                  <div class="write single" contenteditable="true" data-field="teacher"></div>
+                </div>
+                <div class="meta-item">
+                  <span>实训日期</span>
+                  <div class="write single" contenteditable="true" data-field="date"></div>
+                </div>
+                <div class="meta-item">
+                  <span>课时</span>
+                  <div class="write single" contenteditable="true" data-field="hours"></div>
+                </div>
               </div>
             </div>
 
             <div class="row">
               <div class="label">实训课题</div>
-              <div class="write" contenteditable="true" data-field="topic" data-placeholder="填写本次实训课题 / 零件或项目名称"></div>
+              <div class="write" contenteditable="true" data-field="topic" data-placeholder="填写本次实训课题，如动力电池、驱动电机、充电系统等"></div>
             </div>
 
             <div class="row row-goal">
@@ -89,11 +91,11 @@
               <div class="label">实训准备</div>
               <div class="prep-rows">
                 <div class="prep-row">
-                  <div class="sub-label">刀、量、工具</div>
+                  <div class="sub-label">工具、仪器</div>
                   <div class="write" contenteditable="true" data-field="tools"></div>
                 </div>
                 <div class="prep-row">
-                  <div class="sub-label">辅具、材料</div>
+                  <div class="sub-label">防护、材料</div>
                   <div class="write" contenteditable="true" data-field="materials"></div>
                 </div>
               </div>
@@ -102,24 +104,29 @@
             <div class="row row-process">
               <div class="label">实训实施</div>
               <div class="process">
-                <div class="guide">一、安全检查与准备工作</div>
-                <div class="write" contenteditable="true" data-field="safetyPrep" data-placeholder="防护用品、设备点检、图样与工艺准备等"></div>
+                <div class="guide">一、高压安全检查与准备工作</div>
+                <div class="write" contenteditable="true" data-field="safetyPrep" data-placeholder="绝缘防护穿戴、车辆下电验电、绝缘检测、工位警示等"></div>
                 <div class="guide">二、操作步骤</div>
                 <div class="write grow" contenteditable="true" data-field="steps" data-placeholder="按工序写出主要操作步骤"></div>
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        </div>
 
-        <section class="page page-right">
+        <div class="page-wrap">
+          <div class="page-tag no-print">反面</div>
+          <section class="page page-back">
           <div class="page-inner">
+            <h1 class="form-title">新能源汽车实训记录表（反面）</h1>
+
             <div class="row row-process-continue">
               <div class="label">实训实施</div>
               <div class="process">
                 <div class="guide">三、过程记录与问题处理</div>
                 <div class="write grow" contenteditable="true" data-field="processNotes" data-placeholder="记录操作过程、异常现象及处理办法"></div>
-                <div class="guide">四、质量检测</div>
-                <div class="write" contenteditable="true" data-field="qualityCheck" data-placeholder="检测项目、实测数据、是否合格"></div>
+                <div class="guide">四、检测记录</div>
+                <div class="write" contenteditable="true" data-field="qualityCheck" data-placeholder="检测项目、实测数据、判定结果"></div>
               </div>
             </div>
 
@@ -135,7 +142,7 @@
                   <div class="write" contenteditable="true" data-field="safetySummary"></div>
                 </div>
                 <div class="summary-row">
-                  <div class="printed">设备维护保养、实训场地卫生总结：</div>
+                  <div class="printed">设备、车辆维护与实训场地卫生总结：</div>
                   <div class="write" contenteditable="true" data-field="maintenanceSummary"></div>
                 </div>
               </div>
@@ -157,10 +164,6 @@
                 <div class="write single" contenteditable="true" data-field="score"></div>
               </div>
               <div class="sign-item">
-                <span>学生签名</span>
-                <div class="write single" contenteditable="true" data-field="studentSign"></div>
-              </div>
-              <div class="sign-item">
                 <span>教师签名</span>
                 <div class="write single" contenteditable="true" data-field="teacherSign"></div>
               </div>
@@ -170,19 +173,20 @@
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        </div>
       </article>
     </div>
   </main>
 
   <div id="printDialog" class="modal no-print" hidden>
     <div class="modal-card" role="dialog" aria-labelledby="printTitle">
-      <h2 id="printTitle">导出 A3 PDF</h2>
+      <h2 id="printTitle">A3 正反面打印</h2>
       <ol>
-        <li>目标打印机选择 <strong>另存为 PDF</strong> 或 <strong>Microsoft Print to PDF</strong>。</li>
-        <li>纸张尺寸选择 <strong>A3</strong>。</li>
-        <li>方向选择 <strong>横向</strong>。</li>
-        <li>边距选择 <strong>无 / 默认</strong>，并勾选 <strong>背景图形</strong>。</li>
+        <li>目标打印机选择本机打印机，或 <strong>另存为 PDF</strong>。</li>
+        <li>纸张尺寸选择 <strong>A3</strong>，方向选择 <strong>纵向</strong>。</li>
+        <li>开启 <strong>双面打印</strong>，翻转方式选 <strong>长边翻转</strong>。</li>
+        <li>边距选择 <strong>无</strong>，并勾选 <strong>背景图形</strong>。</li>
       </ol>
       <div class="modal-actions">
         <button type="button" id="btnCancelPrint" class="btn">取消</button>
