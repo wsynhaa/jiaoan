@@ -29,3 +29,23 @@
    - 勾选 `背景图形`，以保留绿色表格线
 
 也可点击「填写示例」查看一份车工实训样例，或「清空」后打印空白表手写。
+
+## Docker 部署
+
+需要本机已安装 Docker 和 Docker Compose。
+
+```bash
+docker compose up -d --build
+```
+
+浏览器打开 http://localhost:8080 即可填写、打印 PDF。
+
+常用命令：
+
+```bash
+docker compose ps
+docker compose logs -f
+docker compose down
+```
+
+默认把容器 80 端口映射到本机 **8080**。若要改端口，编辑 `docker-compose.yml` 中的 `"8080:80"`。
