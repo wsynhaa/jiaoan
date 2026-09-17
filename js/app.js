@@ -130,6 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setFormData({});
     localStorage.removeItem(STORAGE_KEY);
   });
+  document.getElementById("btnWord").addEventListener("click", () => {
+    exportTrainingReportWord();
+  });
   document.getElementById("btnPrint").addEventListener("click", openPrintDialog);
   document.getElementById("btnCancelPrint").addEventListener("click", closePrintDialog);
   document.getElementById("btnConfirmPrint").addEventListener("click", printSheet);
