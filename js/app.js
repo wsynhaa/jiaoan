@@ -1,7 +1,7 @@
 const STORAGE_KEY = "nev-training-a3-form-v1";
 
 const sampleData = {
-  major: "新能源汽车运用与维修",
+  major: "新能源汽车",
   className: "新能源2301班",
   studentName: "张明",
   studentId: "20230108",
